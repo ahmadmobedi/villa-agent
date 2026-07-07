@@ -42,12 +42,30 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 """
     )
 
+async def buttons(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    text = update.message.text
+
+    if text == "📈 بورس ایران":
+        await update.message.reply_text("بخش بورس ایران به زودی فعال می‌شود.")
+
+    elif text == "🥇 صندوق‌های طلا":
+        await update.message.reply_text("بخش صندوق‌های طلا به زودی فعال می‌شود.")
+
+    elif text == "🌍 فارکس":
+        await update.message.reply_text("بخش فارکس به زودی فعال می‌شود.")
+
+    elif text == "🤖 چت با هوش مصنوعی":
+        await update.message.reply_text("هوش مصنوعی به زودی متصل می‌شود.")
+
+    elif text == "⚙️ تنظیمات":
+        await update.message.reply_text("بخش تنظیمات به زودی اضافه می‌شود.")
 
 def main():
     app = Application.builder().token(TOKEN).build()
 
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("help", help_command))
+    app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, buttons))
 
     print("Bot is running...")
 

@@ -10,10 +10,22 @@ from telegram.ext import (
 
 TOKEN = os.environ["BOT_TOKEN"]
 
-
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
+
+    keyboard = [
+        ["📈 بورس ایران", "🥇 صندوق‌های طلا"],
+        ["🌍 فارکس", "🤖 چت با هوش مصنوعی"],
+        ["⚙️ تنظیمات"]
+    ]
+
+    reply_markup = ReplyKeyboardMarkup(
+        keyboard,
+        resize_keyboard=True
+    )
+
     await update.message.reply_text(
-        "سلام احمد 👋\nربات Villa Agent با موفقیت راه‌اندازی شد."
+        "سلام احمد 👋\nربات Villa Agent با موفقیت راه‌اندازی شد.",
+        reply_markup=reply_markup
     )
 
 

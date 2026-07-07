@@ -81,18 +81,18 @@ async def buttons(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     elif text == "🔙 بازگشت":
 
-    keyboard = [
+        keyboard = [
         ["🏡 املاک", "📈 بورس ایران"],
         ["🥇 صندوق‌های طلا", "🌍 فارکس"],
         ["🤖 چت با هوش مصنوعی", "⚙️ تنظیمات"]
     ]
 
-    reply_markup = ReplyKeyboardMarkup(
+        reply_markup = ReplyKeyboardMarkup(
         keyboard,
         resize_keyboard=True
     )
 
-    await update.message.reply_text(
+        await update.message.reply_text(
         "به منوی اصلی بازگشتید.",
         reply_markup=reply_markup
     )

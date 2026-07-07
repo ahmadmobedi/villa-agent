@@ -74,7 +74,15 @@ async def buttons(update: Update, context: ContextTypes.DEFAULT_TYPE):
     elif text == "📊 تحلیل بازار":
 
         await update.message.reply_text(
-            "تحلیل بازار املاک به زودی فعال می‌شود."
+        "📊 تحلیل بازار املاک",
+        reply_markup=market_analysis_menu()
+        )
+
+    elif text == "🔙 بازگشت به املاک":
+
+        await update.message.reply_text(
+        "🏡 بخش املاک",
+        reply_markup=real_estate_menu()
         )
 
     elif text == "📈 بورس ایران":

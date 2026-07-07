@@ -13,7 +13,6 @@ def main_menu():
         resize_keyboard=True
     )
 
-
 def real_estate_menu():
     keyboard = [
         ["🏠 ثبت ملک", "🔍 جستجوی ملک"],
@@ -21,6 +20,19 @@ def real_estate_menu():
         ["📊 تحلیل بازار"],
         ["🔙 بازگشت"]
     ]
+
+def market_analysis_menu():
+    keyboard = [
+        ["📈 روند قیمت", "🏘 مقایسه مناطق"],
+        ["💰 قیمت هر متر", "📊 گزارش روز بازار"],
+        ["📍 نقشه قیمت‌ها"],
+        ["🔙 بازگشت به املاک"]
+    ]
+
+    return ReplyKeyboardMarkup(
+        keyboard,
+        resize_keyboard=True
+    )
 
     return ReplyKeyboardMarkup(
         keyboard,

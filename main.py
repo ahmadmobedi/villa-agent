@@ -26,7 +26,6 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
     "سلام احمد 👋\nبه ربات اختصاصی احمد موبدی خوش آمدی.",
     reply_markup=reply_markup
-)
     )
 
 

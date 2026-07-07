@@ -56,22 +56,22 @@ async def buttons(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     elif text == "🏡 املاک":
 
-    keyboard = [
-        ["🏠 ثبت ملک", "🔍 جستجوی ملک"],
-        ["📋 فایل‌های من", "❤️ علاقه‌مندی‌ها"],
-        ["📊 تحلیل بازار", "💰 محاسبه وام"],
-        ["🔙 بازگشت"]
-    ]
+        keyboard = [
+            ["🏠 ثبت ملک", "🔍 جستجوی ملک"],
+            ["📋 فایل‌های من", "❤️ علاقه‌مندی‌ها"],
+            ["📊 تحلیل بازار", "💰 محاسبه وام"],
+            ["🔙 بازگشت"]
+        ]
 
-    reply_markup = ReplyKeyboardMarkup(
-        keyboard,
-        resize_keyboard=True
-    )
+        reply_markup = ReplyKeyboardMarkup(
+            keyboard,
+            resize_keyboard=True
+        )
 
-    await update.message.reply_text(
-        "🏡 بخش املاک\nیکی از گزینه‌های زیر را انتخاب کنید:",
-        reply_markup=reply_markup
-    )
+        await update.message.reply_text(
+            "🏡 بخش املاک\nیکی از گزینه‌های زیر را انتخاب کنید:",
+            reply_markup=reply_markup
+        )
 
     elif text == "🤖 چت با هوش مصنوعی":
         await update.message.reply_text("هوش مصنوعی به زودی متصل می‌شود.")

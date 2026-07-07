@@ -13,10 +13,10 @@ TOKEN = os.environ["BOT_TOKEN"]
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     keyboard = [
-        ["📈 بورس ایران", "🥇 صندوق‌های طلا"],
-        ["🌍 فارکس", "🤖 چت با هوش مصنوعی"],
-        ["⚙️ تنظیمات"]
-    ]
+    ["🏡 املاک", "📈 بورس ایران"],
+    ["🥇 صندوق‌های طلا", "🌍 فارکس"],
+    ["🤖 چت با هوش مصنوعی", "⚙️ تنظیمات"]
+]
 
     reply_markup = ReplyKeyboardMarkup(
         keyboard,
@@ -53,6 +53,9 @@ async def buttons(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     elif text == "🌍 فارکس":
         await update.message.reply_text("بخش فارکس به زودی فعال می‌شود.")
+
+    elif text == "🏡 املاک":
+    await update.message.reply_text("بخش املاک به زودی فعال می‌شود.")
 
     elif text == "🤖 چت با هوش مصنوعی":
         await update.message.reply_text("هوش مصنوعی به زودی متصل می‌شود.")

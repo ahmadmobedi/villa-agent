@@ -1,7 +1,11 @@
 from telegram import Update
 from telegram.ext import ContextTypes
 
-from menus import main_menu, real_estate_menu
+from menus import (
+    main_menu,
+    real_estate_menu,
+    market_analysis_menu,
+    )
 
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
